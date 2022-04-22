@@ -1,0 +1,174 @@
+/* landing page styling */
+
+.landing-page {
+    background-color: #151412;
+    color: whitesmoke;
+}
+
+mark {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+.welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.welcome h1 {
+    font-family: var(--font);
+    font-size: var(--h1-landing-size);
+    font-weight: var(--header-weight);
+}
+
+.i-am {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1.5;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+
+.skill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1.5;
+    padding-left: 300px;
+    padding-right: 300px;
+}
+
+.i-am, .skill p {
+    font-family: var(--font);
+    font-size: var(--h2-size);
+    font-weight: var(--header-weight);
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+}
+
+header h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 24x;
+}
+
+.bottom-landing {
+    display: flex;
+    justify-content: center;
+    background-color: #151412;
+    color: whitesmoke;
+    margin-bottom: 150px;
+    align-self: flex-end;
+}
+
+.bottom-landing nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 35px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 32px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding-inline-start: 0px;
+}
+
+nav li {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+:root {
+    --h1-landing-size: 64px;
+    --h2-size: 36px;
+    --header-weight: 600;
+    --font: 'IBM Plex Mono', monospace;
+}
+
+/* work section styling */
+
+.my-work {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    background-color: whitesmoke;
+    /* border: 5px solid red; */
+}
+
+.work-entry1, .work-entry2, .work-entry3 {
+    border-top: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.thumbnail {
+    width: 25%;
+    height: 50%;
+    background: grey;
+    padding: 20px;
+    align-self: center;
+}
+
+.description {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 75%;
+    /* padding-left: 50px; */
+    padding-right: 100px;
+    padding-top: 50px;
+    font-family: var(--font);
+}
+
+.description p {
+    font-size: 18px;
+}
+
+.description h2 {
+    font-size: 24px;
+}
+
+.number-marker {
+    padding-left: 25px;
+    padding-top: 25px;
+    font-size: 24px;
+    font-family: var(--font);
+}
+
+/* media query for mobile breakpoint */
+
+@media screen and (max-width: 600px) {
+    .thumbnail {display: none;}
+    .description p {display: none;}
+    .description h2 {align-self: flex-start; margin: 0;}
+    .description {display: flex; align-items: center; padding-top:15px;}
+    .number-marker {padding-top: 0px;}
+    .welcome {display: none;}
+    nav > h2 {font-size: 24px; font-weight: 500;}
+    .i-am {font-size: 20px; padding-left: 30px; padding-right: 30px; line-height: 2;}
+    .skill p {font-size: 20px;}
+    .skill {padding-left: 30px; padding-right: 30px; line-height: 2;}
+    .bottom-landing {display: none;}
+}
+    
